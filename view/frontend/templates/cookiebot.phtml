@@ -1,0 +1,21 @@
+<?php
+/**
+ * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
+ * @var \Comwrap\Cookiebot\ViewModel\CookiebotViewModel $viewModel
+ * @var \Magento\Framework\View\Element\Template $block
+ */
+$viewModel = $block->getViewModel();
+?>
+<?php if ($viewModel->isEnabled()): ?>
+    <?= /* @noEscape */ $secureRenderer->renderTag(
+        'script',
+        [
+            'type' => 'text/javascript',
+            'src' => 'https://consent.cookiebot.com/uc.js',
+            'data-cbid' => $viewModel->getCookiebotId()
+        ],
+        "",
+        false
+    ); ?>
+<?php endif; ?>
+

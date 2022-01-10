@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="comwrap" translate="label" sortOrder="190">
+            <label>Comwrap</label>
+        </tab>
+        <section id="cookiebot" sortOrder="100" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+            <label>Cookiebot</label>
+            <tab>comwrap</tab>
+            <resource>Comwrap_AttendeesEvent::config_comwrap_cookiebot</resource>
+            <group id="settings" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                <label>Cookiebot Configuration</label>
+                <field id="enabled" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="cbid" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                    <label>Cookiebot ID Value</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

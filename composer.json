@@ -1,0 +1,21 @@
+{
+  "name": "comwrap/cookiebot",
+  "version": "1.0.0",
+  "description": "Module for implementation cookiebot",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "magento/module-theme": "101.1.*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Comwrap\\Cookiebot\\": ""
+    }
+  }
+}
