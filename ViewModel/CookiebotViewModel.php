@@ -6,7 +6,6 @@ namespace Comwrap\Cookiebot\ViewModel;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 use Magento\Store\Model\ScopeInterface;
-use Magento\Store\Model\StoreManagerInterface;
 
 class CookiebotViewModel implements ArgumentInterface
 {
@@ -30,10 +29,6 @@ class CookiebotViewModel implements ArgumentInterface
      * @var ScopeConfigInterface
      */
     private $scopeConfig;
-    /**
-     * @var StoreManagerInterface
-     */
-    private $storeManager;
 
     /**
      * Cookiebot view model construct
@@ -41,11 +36,9 @@ class CookiebotViewModel implements ArgumentInterface
      * @param ScopeConfigInterface $scopeConfig
      */
     public function __construct(
-        ScopeConfigInterface $scopeConfig,
-        StoreManagerInterface $storeManager
+        ScopeConfigInterface $scopeConfig
     ) {
         $this->scopeConfig = $scopeConfig;
-        $this->storeManager = $storeManager;
     }
 
     /**
