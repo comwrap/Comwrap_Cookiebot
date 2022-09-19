@@ -5,7 +5,9 @@
         <cookiebot>
             <settings>
                 <enabled>0</enabled>
+                <cburl><![CDATA[https://consent.cookiebot.com/uc.js]]></cburl>
                 <cbid>XXXXXXXXXX</cbid>
+                <async>1</async>
             </settings>
         </cookiebot>
     </default>

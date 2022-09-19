@@ -1,21 +1,22 @@
 <?php
 /**
- * @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer
  * @var \Comwrap\Cookiebot\ViewModel\CookiebotViewModel $viewModel
  * @var \Magento\Framework\View\Element\Template $block
+ * @var \Magento\Framework\Escaper $escaper
  */
 $viewModel = $block->getViewModel();
 ?>
 <?php if ($viewModel->isEnabled()): ?>
-    <?= /* @noEscape */ $secureRenderer->renderTag(
-        'script',
-        [
-            'type' => 'text/javascript',
-            'src' => 'https://consent.cookiebot.com/uc.js',
-            'data-cbid' => $viewModel->getCookiebotId()
-        ],
-        "",
-        false
-    ); ?>
+    <script type="text/x-magento-init">
+            {
+                "*": {
+                    "Comwrap_Cookiebot/js/cookiebot": {
+                        "cookieBotUrl": "<?= $escaper->escapeUrl($viewModel->getCookiebotUrl()) ?>",
+                        "accountId": "<?= $escaper->escapeHtmlAttr($viewModel->getCookiebotId()) ?>",
+                        "asyncMode": <?= /** @noEscape  */ $viewModel->getAsyncMode() ?>
+                    }
+                }
+            }
+    </script>
 <?php endif; ?>
 
