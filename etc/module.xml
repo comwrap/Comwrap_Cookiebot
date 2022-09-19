@@ -4,6 +4,9 @@
     <module name="Comwrap_Cookiebot">
         <sequence>
             <module name="Magento_Theme"/>
+            <module name="Magento_Cookie"/>
+            <module name="Magento_Config"/>
+            <module name="Magento_GoogleTagManager"/>
         </sequence>
     </module>
 </config>
