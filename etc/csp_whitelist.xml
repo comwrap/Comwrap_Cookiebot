@@ -3,7 +3,14 @@
     <policies>
         <policy id="frame-src">
             <values>
-                <value id="cookiebot" type="host">https://consentcdn.cookiebot.com</value>
+                <value id="cookiebotcdn-framesrc" type="host">https://consentcdn.cookiebot.com</value>
+                <value id="cookiebot-framesrc" type="host">https://consent.cookiebot.com</value>
+            </values>
+        </policy>
+        <policy id="script-src">
+            <values>
+                <value id="cookiebotcdn-scriptsrc" type="host">https://consentcdn.cookiebot.com</value>
+                <value id="cookiebot-scriptsrc" type="host">https://consent.cookiebot.com</value>
             </values>
         </policy>
     </policies>

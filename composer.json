@@ -1,6 +1,6 @@
 {
   "name": "comwrap/cookiebot",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Module for implementation cookiebot",
   "type": "magento2-module",
   "require": {
