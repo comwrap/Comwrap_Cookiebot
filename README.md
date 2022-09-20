@@ -23,6 +23,10 @@ Magento Configuration: Stores > Configuration > Comwrap > Cookiebot > Cookiebot 
 ## Changelog
 
 1.1.0:
- - update scipt insertion way with using JS to get it like first element in head section
+ - update script insertion way with using JS to get it like first element in head section
  - added additional configuration values to manage script URL and async attribute
  - updated module sequence configuration to get script initiated after Google Tag Manager 
+
+1.1.1:
+ - minor code fixes
+ - update CSP config

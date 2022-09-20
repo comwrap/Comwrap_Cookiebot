@@ -12,7 +12,6 @@ define([
         let url = config.cookieBotUrl,
             accId = config.accountId,
             async = config.asyn;
-            console.log(config);
         (function (win, doc, url, accId, async) {
             let firstElement = doc.getElementsByTagName('script')[0];
             let element = doc.createElement('script');
